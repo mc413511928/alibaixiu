@@ -9,7 +9,7 @@ $.ajax({
     }
 });
 // 上传文件图片
-$("#feature").on('change', function() {
+$("#parentBox").on('change', '#feature', function() {
     let formDate = new FormData();
     formDate.append('cover', this.files[0]);
     $.ajax({
@@ -23,7 +23,8 @@ $("#feature").on('change', function() {
 
         }
     });
-});
+})
+
 $("#addForm").on('submit', function(e) {
     e.preventDefault;
     // 获取管理员在表单输入的内容

@@ -21,8 +21,7 @@ function changePage(page) {
         url: "/comments",
         data: { page: page },
         success: function(res) {
-
-
+            console.log(res);
             let html = template('commentsTpl', res);
             $("#commentsBox").html(html);
             let pageHtml = template('pageTpl', res);
